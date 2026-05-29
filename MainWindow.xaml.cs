@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -22,21 +23,17 @@ namespace CyberBabe_Part2
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            //creating an instance for the class Array
-            ArrayList reply = new ArrayList();
-            ArrayList ignore = new ArrayList();
-            user_names check_name = new user_names();
+        //creating an instance for the class Array
+        ArrayList reply = new ArrayList();
+        ArrayList ignore = new ArrayList();
+        user_names check_name = new user_names();
 
-            // variables
-            string username = string.Empty;
-            string pre_question = string.Empty;
-            int counting = 0;
+        // variables
+        string username = string.Empty;
+        string pre_question = string.Empty;
+        int counting = 0;
 
-            ChatBot bot;
-
-
+        ChatBot bot;
         public MainWindow()
         {
             InitializeComponent();
@@ -117,7 +114,6 @@ namespace CyberBabe_Part2
             Conversation.Items.Clear();
             questions.Clear();
         }
-
         private string RemoveSpecialCharacters(string input)
         {
             return Regex.Replace(input, @"[^a-zA-Z0-9\s]", "");
@@ -352,3 +348,5 @@ namespace CyberBabe_Part2
 
     }//end of class
 }//end of namespace
+
+    
