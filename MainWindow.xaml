@@ -6,7 +6,179 @@
         xmlns:local="clr-namespace:CyberBabe_Part2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
-        
+        <!--This grid is responsible for the start page-->
+        <Grid x:Name="start_grid" Visibility="Visible">
+
+            <!--CyberBabe Logo -->
+            <Image Source="/cyberbabe_logo.png"
+         Height="250"
+         Width="300" 
+         Margin="0,0,0,200" 
+         />
+
+            <!-- message welcoming the user -->
+            <TextBlock
+        Height="50" 
+        Width="300"
+        Margin="0,100,0,0"
+        Text="Welcome to Cyberbabe" 
+        TextAlignment="Center"
+        />
+
+            <!--start cyberbabe button-->
+            <Button
+         Content="Start CyberBabe"
+         Margin="0,200,0,0" 
+         Height="50" 
+         Width="300"
+         Click="start_ai"
+         />
+            <TextBlock HorizontalAlignment="Left" Margin="349,424,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
+        </Grid>
+
+
+        <!-- Username Grid -->
+        <Grid x:Name="username_grid"
+      Visibility="Hidden"
+      Background="#FFF0F6">
+
+            <Border Width="400"
+            Padding="30"
+            Background="White"
+            CornerRadius="15"
+            BorderBrush="#F3C4DA"
+            BorderThickness="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel HorizontalAlignment="Center">
+
+                    <!-- Logo -->
+                    <Image Source="/cyberbabe_logo.png"
+                   Height="180"
+                   Width="220"
+                   Margin="0,0,0,20"/>
+
+                    <!-- Welcome Text -->
+                    <TextBlock Text="Welcome to CyberBabe"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="#D63384"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"/>
+
+                    <!-- Instruction -->
+                    <TextBlock Text="Please enter your username to continue"
+                       FontSize="14"
+                       Foreground="#8A4B6B"
+                       TextAlignment="Center"
+                       Margin="0,0,0,20"/>
+
+
+                    <TextBlock Text="Username must not contain numbers or symbols"
+                               TextAlignment="Center"
+                               Foreground="Red"
+                        />
+
+                    <TextBox x:Name="users_input"
+                     Width="300"
+                     Height="45"
+                     FontSize="14"
+                     Padding="10"
+                     BorderBrush="#E649A1"/>
+                    <Button Content="Submit Username"
+                    Width="300"
+                    Height="45"
+                    Background="#E649A1"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    BorderThickness="0"
+                    Click="submit_name"/>
+
+
+                </StackPanel>
+
+            </Border>
+
+        </Grid>
+
+        <!--This grid deals with the interaction between the user and chatbot-->
+        <Grid x:Name="chatbot_grid"
+      Visibility="Hidden"
+      Background="#FFF0F6"
+      Margin="10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Heading -->
+            <TextBlock x:Name="Heading"
+               Text="CyberBabe ChatBot"
+               FontSize="28"
+               FontWeight="Bold"
+               Foreground="#D63384"
+               HorizontalAlignment="Center"
+               Margin="0,10,0,20"/>
+
+            <!-- Chat Area -->
+            <!-- Chat Area FIXED -->
+            <Border Grid.Row="1"
+        Background="#FFF0F6"
+        CornerRadius="10"
+        BorderBrush="#F3C4DA"
+        BorderThickness="1"
+        Padding="10"
+        Margin="10">
+
+                <ListView x:Name="Conversation"
+              FontSize="14"
+              Background="White"/>
+            </Border>
+
+            <!-- Bottom Input Area -->
+            <Grid Grid.Row="2" Margin="10">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Question Box -->
+                <TextBox x:Name="questions"
+                 Height="40"
+                 Margin="0,0,10,0"
+                 FontSize="14"
+                 VerticalContentAlignment="Center"
+                 Padding="10"/>
+
+                <!-- Send Button -->
+                <Button Grid.Column="1"
+                Content="Send"
+                Height="40"
+                Margin="0,0,10,0"
+                Background="#E649A1"
+                Foreground="White"
+                FontWeight="Bold"
+                Click="btnSend_Click"/>
+
+                <!-- Clear Button -->
+                <Button Grid.Column="2"
+                Content="Clear"
+                Height="40"
+                Background="#DC2626"
+                Foreground="White"
+                FontWeight="Bold"
+                Click="btnClear_Click"/>
+
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
+
