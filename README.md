@@ -83,8 +83,8 @@ interested_topic.txt Stores user interests
 - Add speech to text input
 - Improve chatbot learning capabilities
 
-Repository link
-youtube link
+Repository link: https://github.com/ST10481631/CyberBabe_Part2
+youtube link: https://www.youtube.com/watch?v=u7jOsSwSe4I
 
 
 References Microsoft. 2023. SoundPlayer Class. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.media.soundplayer. Accessed 11 April 2026. Microsoft. 2023. Console.ForegroundColor Property. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.console.foregroundcolor. Accessed 11 April 2026. Microsoft. 2023. Bitmap Class. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.drawing.bitmap. Accessed 11 April 2026. Microsoft. 2023. ArrayList Class. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.collections.arraylist. Accessed 11 April 2026. GitHub. 2024. Understanding GitHub Actions. Available at: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions. Accessed 11 April 2026.
